@@ -6,25 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body>table{
+        body>table {
             width: 80%;
             margin: 40px auto;
             background-color: rgba(26, 37, 37, 0.87);
-            box-shadow:transparent;
+            box-shadow: transparent;
         }
-        table{
-            border-collapse:collapse;
+
+        table {
+            border-collapse: collapse;
         }
-        table.list{
+
+        table.list {
             width: 100%;
         }
-        td,th{
+
+        td,
+        th {
             border: 2px solid rgb(46, 41, 41);
             text-align: left;
             padding: 8px 15px;
         }
-        tr:nth-child(even),table.list thead>tr{
-            background-color: rgb(38, 43, 48);
+
+        tr:nth-child(even),
+        table.list thead>tr {
+            background-color: rgb(48, 51, 53);
+        }
+
+        input[type="submit"]:hover {
+            background: rgb(78, 77, 72);
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 5px 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 30px;
+            border: none;
+            margin: 10px 0 10px;
+            outline: none;
+        }
+
+        input[type="reset"]:hover {
+            background: rgba(209, 24, 24, 0.514);
+        }
+
+        input[type="text"]:focus {
+            width: 90%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+        }
+
+        input[type="number"]:focus {
+            width: 90%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 1px;
         }
     </style>
     <title>Drud Operations</title>
@@ -49,11 +92,15 @@
                     </div>
                     <div>
                         <label for="number">Number</label>
-                        <input type="text" name="number" id="number">
+                        <input type="number" name="number" id="number">
                     </div>
                     <div>
                         <label for="city">City</label>
                         <input type="text" name="city" id="city">
+                    </div>
+                    <div class="form_action">
+                        <input type="submit" value="submit" id="submit">
+                        <input type="reset" value="reset" id="reset">
                     </div>
                 </form>
             </td>
@@ -69,10 +116,43 @@
                             <th></th>
                         </tr>
                     </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
             </td>
         </tr>
     </table>
+    <script type="text/javascript">
+        var selectedrows = null;
+        function FormSubmit(e) {
+            event.preventDefault();
+            var formData = readform();
+            if(selectedrows=== null){
+                insertNewData(formData);
+            }else{
+                updateData(formData);
+            }
+            resetForm();
+        }
+
+        // read form data
+        function readform(){
+            var formData = {};
+            formData["name"]=document.getElementById("name").value;
+            formData["age"]=document.getElementById("age").value;
+            formData["gender"]=document.getElementById("gender").value;
+            formData['number']=document.getElementById("number").value;
+            formData["city"]=document.getElementById("city").value;
+            return formData;
+        }
+
+        // create form Data
+        function insertNewData(data){
+            
+        }
+
+    </script>
 </body>
 
 </html>
