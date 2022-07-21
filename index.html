@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drud Operations</title>
+</head>
+<body style="background-color:rgba(18, 54, 63, 0.479);">
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="on" onsubmit="FormSubmit()">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" >
+                    </div>
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="text" name="age" id="age" >
+                    </div>
+                    <div>
+                        <label for="gender">Gender</label>
+                        <input type="text" name="gender" id="gender" >
+                    </div>
+                    <div>
+                        <label for="number">Number</label>
+                        <input type="text" name="number" id="number" >
+                    </div>
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" >
+                    </div>
+                </form> 
+            </td>
+            <td>
+                <table class="list" id="personlist">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Number</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
