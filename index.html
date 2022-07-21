@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body>table{
+            width: 80%;
+            margin: 40px auto;
+            background-color: rgba(26, 37, 37, 0.87);
+            box-shadow:transparent;
+        }
+        table{
+            border-collapse:collapse;
+        }
+        table.list{
+            width: 100%;
+        }
+        td,th{
+            border: 2px solid rgb(46, 41, 41);
+            text-align: left;
+            padding: 8px 15px;
+        }
+        tr:nth-child(even),table.list thead>tr{
+            background-color: rgb(38, 43, 48);
+        }
+    </style>
     <title>Drud Operations</title>
 </head>
-<body style="background-color:rgba(18, 54, 63, 0.479);">
+
+<body style="background-color:rgba(44, 80, 88, 0.336);">
     <table>
         <tr>
             <td>
                 <form autocomplete="on" onsubmit="FormSubmit()">
                     <div>
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" >
+                        <input type="text" name="name" id="name">
                     </div>
                     <div>
                         <label for="age">Age</label>
-                        <input type="text" name="age" id="age" >
+                        <input type="text" name="age" id="age">
                     </div>
                     <div>
                         <label for="gender">Gender</label>
-                        <input type="text" name="gender" id="gender" >
+                        <input type="text" name="gender" id="gender">
                     </div>
                     <div>
                         <label for="number">Number</label>
-                        <input type="text" name="number" id="number" >
+                        <input type="text" name="number" id="number">
                     </div>
                     <div>
                         <label for="city">City</label>
-                        <input type="text" name="city" id="city" >
+                        <input type="text" name="city" id="city">
                     </div>
-                </form> 
+                </form>
             </td>
             <td>
                 <table class="list" id="personlist">
@@ -50,4 +74,5 @@
         </tr>
     </table>
 </body>
+
 </html>
